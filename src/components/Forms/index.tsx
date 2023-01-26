@@ -17,7 +17,7 @@ class Forms extends React.Component<{
       ...oldTasks,
       {
         ...this.state,
-        select: false,
+        selected: false,
         complete: false,
         id: uuidv4(),
       },
