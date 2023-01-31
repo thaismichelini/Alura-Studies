@@ -35,7 +35,7 @@ export default function Timer({ selected, endTask }: Props) {
       <div className={style.relogioWrapper}>
         <Watch time={time} />
       </div>
-      <Button onClick={() => regressive(time)} text="Começar" />
+      <Button onClick={() => regressive(time)}>Adicionar</Button>
     </div>
   );
 }
