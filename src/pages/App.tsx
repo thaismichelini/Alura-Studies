@@ -18,11 +18,28 @@ function App() {
       }))
     );
   }
+  function endTask() {
+    if (selected) {
+      setSelected(undefined);
+      setTasks((oldTasks) =>
+        oldTasks.map((task) => {
+          if (task.id === selected.id) {
+            return {
+              ...task,
+              selected: false,
+              completed: true,
+            };
+          }
+          return task;
+        })
+      );
+    }
+  }
   return (
     <div className={style.AppStyle}>
       <Forms setTasks={setTasks} />
       <List tasks={tasks} selectTask={selectTask} />
-      <Time selected={selected} />
+      <Time selected={selected} endTask={endTask} />
     </div>
   );
 }

@@ -60,7 +60,7 @@ class Forms extends React.Component<{
             required
           />
         </div>
-        <Button type="submit" texto="Adicionar" />
+        <Button type="submit" text="Adicionar" />
       </form>
     );
   }
