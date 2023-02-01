@@ -26,13 +26,13 @@ function Forms({ setTasks }: Props) {
     setTime('00:00');
   }
   return (
-    <form className={style.novaTarefa} onSubmit={addTask}>
+    <form className={style.newTask} onSubmit={addTask}>
       <div className={style.inputContainer}>
-        <label htmlFor="tarefa">Adicione um novo estudo</label>
+        <label htmlFor="task">Adicione um novo estudo</label>
         <input
           type="text"
-          name="tarefa"
-          id="tarefa"
+          name="task"
+          id="task"
           value={task}
           onChange={(evento) => setTask(evento.target.value)}
           placeholder="O que você quer estudar"
@@ -40,14 +40,14 @@ function Forms({ setTasks }: Props) {
         />
       </div>
       <div className={style.inputContainer}>
-        <label htmlFor="tempo">Tempo</label>
+        <label htmlFor="time">Tempo</label>
         <input
           type="time"
           step="1"
-          name="tempo"
+          name="time"
           value={time}
           onChange={(evento) => setTime(evento.target.value)}
-          id="tempo"
+          id="time"
           min="00:00:00"
           max="01:30:00"
           required

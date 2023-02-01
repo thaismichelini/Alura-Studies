@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Time from '../components/Timer';
 import Forms from '../components/Forms';
 import List from '../components/List';

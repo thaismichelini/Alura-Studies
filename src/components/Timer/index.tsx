@@ -30,12 +30,12 @@ export default function Timer({ selected, endTask }: Props) {
   }
 
   return (
-    <div className={style.cronometro}>
-      <p className={style.titulo}>Escolha um card e inicie o Cronômetro</p>
-      <div className={style.relogioWrapper}>
+    <div className={style.timer}>
+      <p className={style.title}>Escolha um card e inicie o Cronômetro</p>
+      <div className={style.watchWrapper}>
         <Watch time={time} />
       </div>
-      <Button onClick={() => regressive(time)}>Adicionar</Button>
+      <Button onClick={() => regressive(time)}>Começar</Button>
     </div>
   );
 }

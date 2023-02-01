@@ -9,8 +9,8 @@ interface Props {
 
 function List({ tasks, selectTask }: Props) {
   return (
-    <aside className={style.listaTarefas}>
-      <h2>Estudo do dia</h2>
+    <aside className={style.listTasks}>
+      <h2> Estudos do dia </h2>
       <ul>
         {tasks.map((item) => (
           <Item selectTask={selectTask} key={item.id} {...item} />

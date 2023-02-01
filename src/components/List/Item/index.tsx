@@ -15,8 +15,8 @@ export default function Item({
 }: Props) {
   return (
     <li
-      className={`${style.item} ${selected ? style.itemSelecionado : ''} ${
-        complete ? style.itemCompletado : ''
+      className={`${style.item} ${selected ? style.itemSelected : ''} ${
+        complete ? style.itemCompleted : ''
       }`}
       onClick={() =>
         !complete &&
@@ -28,10 +28,10 @@ export default function Item({
           id,
         })
       }>
-      <h3> {task}</h3>
-      <span> {time}</span>
+      <h3>{task}</h3>
+      <span>{time}</span>
       {complete && (
-        <span className={style.concluido} aria-Label="tarefa completada"></span>
+        <span className={style.completed} aria-label="tarefa completada"></span>
       )}
     </li>
   );
